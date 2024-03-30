@@ -66,9 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				3B3BA9542BB3D57E00B37F9B /* BBQuotesApp.swift */,
-				3B3BA96C2BB3E96D00B37F9B /* ViewModel.swift */,
 				3B3BA96E2BB3ECDB00B37F9B /* QuoteView.swift */,
 				3B3BA9562BB3D57E00B37F9B /* ContentView.swift */,
+				3B3BA96C2BB3E96D00B37F9B /* ViewModel.swift */,
 				3B3BA9682BB3DD4100B37F9B /* FetchController.swift */,
 				3B3BA9642BB3DBAA00B37F9B /* Quote.swift */,
 				3B3BA9662BB3DBE500B37F9B /* Character.swift */,
