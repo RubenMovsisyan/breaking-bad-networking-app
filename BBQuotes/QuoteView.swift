@@ -14,47 +14,49 @@ struct QuoteView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image(show.lowercased().filter { $0 != " "})
+                Image(show.lowerNoSpaces)
                     .resizable()
                     .frame(width: geo.size.width * 2.7, height: geo.size.height * 1.2)
                 
                 VStack {
-                    Spacer(minLength: 140)
-                    
-                    switch viewModel.status {
-                    case .fetching:
-                        ProgressView()
-                    case .success(let data):
-                        Text("\"\(data.quote.quote)\"")
-                            .minimumScaleFactor(0.5)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(.black.opacity(0.5))
-                            .clipShape(.capsule)
-                            .padding(.horizontal)
+                    VStack {
+                        Spacer(minLength: 140)
                         
-                        ZStack(alignment: .bottom) {
-                            AsyncImage(url: data.character.images.first!) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFill()
-                            } placeholder: {
-                                ProgressView()
+                        switch viewModel.status {
+                        case .fetching:
+                            ProgressView()
+                        case .success(let data):
+                            Text("\"\(data.quote.quote)\"")
+                                .minimumScaleFactor(0.5)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(.black.opacity(0.5))
+                                .clipShape(.capsule)
+                                .padding(.horizontal)
+                            
+                            ZStack(alignment: .bottom) {
+                                AsyncImage(url: data.character.images.first!) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(width: geo.size.width/1.1, height: geo.size.height/1.8)
+                                
+                                
+                                Text(data.character.name)
+                                    .foregroundStyle(.white)
+                                    .padding(10)
+                                    .frame(maxWidth: .infinity)
+                                    .background(.ultraThinMaterial)
                             }
                             .frame(width: geo.size.width/1.1, height: geo.size.height/1.8)
-                               
-                            
-                            Text(data.character.name)
-                                .foregroundStyle(.white)
-                                .padding(10)
-                                .frame(maxWidth: .infinity)
-                                .background(.ultraThinMaterial)
+                            .cornerRadius(80)
+                        default:
+                            EmptyView()
                         }
-                        .frame(width: geo.size.width/1.1, height: geo.size.height/1.8)
-                        .cornerRadius(80)
-                    default:
-                        EmptyView()
                     }
                     
                     Spacer()
@@ -68,9 +70,9 @@ struct QuoteView: View {
                             .font(.title)
                             .foregroundStyle(.white)
                             .padding()
-                            .background(.breakingBadGreen)
+                            .background(Color("\(show.noSpaces)Button"))
                             .clipShape(.capsule)
-                            .shadow(color: .breakingBadYellow, radius: 2)
+                            .shadow(color:Color("\(show.noSpaces)Shadow") , radius: 2)
                     }
                     
                     Spacer(minLength: 180)
@@ -84,6 +86,6 @@ struct QuoteView: View {
 }
 
 #Preview {
-    QuoteView(show: "Breaking Bad")
+    QuoteView(show: Constants.bbName)
         .preferredColorScheme(.dark)
 }
