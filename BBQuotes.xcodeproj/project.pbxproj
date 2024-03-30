@@ -18,6 +18,7 @@
 		3B3BA96B2BB3E5F500B37F9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3BA96A2BB3E5F500B37F9B /* Constants.swift */; };
 		3B3BA96D2BB3E96D00B37F9B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3BA96C2BB3E96D00B37F9B /* ViewModel.swift */; };
 		3B3BA96F2BB3ECDB00B37F9B /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3BA96E2BB3ECDB00B37F9B /* QuoteView.swift */; };
+		3B3BA9712BB7F2B300B37F9B /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3BA9702BB7F2B300B37F9B /* CharacterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3B3BA96A2BB3E5F500B37F9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B3BA96C2BB3E96D00B37F9B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3B3BA96E2BB3ECDB00B37F9B /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		3B3BA9702BB7F2B300B37F9B /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				3B3BA9542BB3D57E00B37F9B /* BBQuotesApp.swift */,
-				3B3BA96E2BB3ECDB00B37F9B /* QuoteView.swift */,
 				3B3BA9562BB3D57E00B37F9B /* ContentView.swift */,
+				3B3BA96E2BB3ECDB00B37F9B /* QuoteView.swift */,
+				3B3BA9702BB7F2B300B37F9B /* CharacterView.swift */,
 				3B3BA96C2BB3E96D00B37F9B /* ViewModel.swift */,
 				3B3BA9682BB3DD4100B37F9B /* FetchController.swift */,
 				3B3BA9642BB3DBAA00B37F9B /* Quote.swift */,
@@ -165,6 +168,7 @@
 				3B3BA96F2BB3ECDB00B37F9B /* QuoteView.swift in Sources */,
 				3B3BA9692BB3DD4100B37F9B /* FetchController.swift in Sources */,
 				3B3BA9672BB3DBE500B37F9B /* Character.swift in Sources */,
+				3B3BA9712BB7F2B300B37F9B /* CharacterView.swift in Sources */,
 				3B3BA96B2BB3E5F500B37F9B /* Constants.swift in Sources */,
 				3B3BA96D2BB3E96D00B37F9B /* ViewModel.swift in Sources */,
 			);
